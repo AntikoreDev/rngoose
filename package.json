@@ -1,0 +1,25 @@
+{
+  "name": "rngoose",
+  "version": "1.0.0",
+  "description": "Easy rng functions for node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aidanete/rngoose.git"
+  },
+  "keywords": [
+    "RNG"
+  ],
+  "author": "Antikore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aidanete/rngoose/issues"
+  },
+  "homepage": "https://github.com/Aidanete/rngoose#readme"
+}
