@@ -149,7 +149,9 @@ module.exports = {
 		return entry;
 	},
 
-	shuffle(array, options){
+	shuffle(array, options = { inplace: false }){
+		const inplace = options['inplace'] || false;
+
 		if (array === undefined){
 			return module.exports.float(-99999, 100000, options);
 		}
@@ -157,8 +159,10 @@ module.exports = {
 		if (!Array.isArray(array))
 			TypeError(`Function choice must be provided with a valid array`);
 
+
+		const arr = (inplace ? array : array.filter(t => true));
 		// Do the shuffle
-		const shuffled = array.sort((a, b) => {
+		const shuffled = arr.sort((a, b) => {
 			return module.exports.float(-99999, 100000, options);
 		});
 
@@ -167,11 +171,25 @@ module.exports = {
 
 	//Converts a string to a valid seed
 	seed(string){
+
+		if (string === undefined){
+			return Math.abs(new Date().getTime() | 0);
+		}
+
 		let length = string.length;
 		let seed = "";
-		for (let i = 0; i < string.length - 1; i++){
+
+		for (let i = 0; i < length - 1; i++){
 			seed += string.charCodeAt(i);
 		}
-		return parseInt(seed);
+
+		seed = seed.toString();
+		let parsed = parseInt(seed);
+
+		while (parsed === Infinity){
+			seed = seed.substring(0, seed.length - 2);
+			parsed = parseInt(seed);
+		}
+		return Math.max(1, parsed);
 	}
 }
