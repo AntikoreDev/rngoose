@@ -8,7 +8,7 @@ const { extract } = require("./extract.js");
  * @param {Object} options - Defines the seed and salt to be used, and if values must or must not be repeated
  * @returns {Object} Array of objects
  */
-function choices(array, amount,  options = { repeat: false }){
+function choices(array, amount, options = { repeat: false }){
 	const repeat = options['repeat'] || false;
 	const arr = (repeat ? array : array.filter(t => true));
 
