@@ -9,18 +9,18 @@ module.exports = {
 		const salt = parseFloat(options['salt']) 	|| 1;
 
 		Math.seed = function (s){
-            var mask = 0xffffffff;
-            var m_w  = (123456789 + s) & mask;
-            var m_z  = (987654321 - s) & mask;
-        
-            m_z = (36969 * (m_z & 65535) + (m_z >>> 16)) & mask;
-            m_w = (18000 * (m_w & 65535) + (m_w >>> 16)) & mask;
-        
-            var result = ((m_z << 16) + (m_w & 65535)) >>> 0;
-            result /= 4294967296;
-          
-            return result;
-        }
+			var mask = 0xffffffff;
+			var m_w  = (123456789 + s) & mask;
+			var m_z  = (987654321 - s) & mask;
+		
+			m_z = (36969 * (m_z & 65535) + (m_z >>> 16)) & mask;
+			m_w = (18000 * (m_w & 65535) + (m_w >>> 16)) & mask;
+		
+			var result = ((m_z << 16) + (m_w & 65535)) >>> 0;
+			result /= 4294967296;
+		  
+			return result;
+		}
 
 		const random = (seed === undefined ? Math.random() : Math.seed(seed * salt));
 		return random;
@@ -46,25 +46,25 @@ module.exports = {
 		}
 
 		// FLoor and ceil min and max values
-        n1 = Math.ceil(n1);
-        n2 = Math.floor(n2);
+		n1 = Math.ceil(n1);
+		n2 = Math.floor(n2);
 
 		if (n1 >= n2)
 			throw RangeError(`Min value must not be bigger or same as max value`);
 
 		// Get the result and parse as int
-        const result = Math.floor(module.exports.n(options) * ((n2 + 1) - n1) + n1);
-        return result;
-    },
+		const result = Math.floor(module.exports.n(options) * ((n2 + 1) - n1) + n1);
+		return result;
+	},
 
 	randomInt(min, max, options){
 		return module.exports.int(min, max, options);
 	},
 
 	// Random float
-    float(min, max, options){
+	float(min, max, options){
 
-        let n1 = 1;
+		let n1 = 1;
 		let n2 = 6;
 
 		if (arguments.length == 1){
@@ -80,9 +80,9 @@ module.exports = {
 			throw RangeError(`Min value must not be bigger or same as max value`);
 
 		// Get the result and parse as int
-        const result = (module.exports.n(options) * ((n2) - n1) + n1);
-        return result;
-    },
+		const result = (module.exports.n(options) * ((n2) - n1) + n1);
+		return result;
+	},
 
 	randomFloat(min, max, options){
 		return module.exports.float(min, max, options);
@@ -165,13 +165,13 @@ module.exports = {
 		return shuffled;
 	},
 
-    //Converts a string to a valid seed
-    seed(string){
+	//Converts a string to a valid seed
+	seed(string){
 		let length = string.length;
 		let seed = "";
 		for (let i = 0; i < string.length - 1; i++){
 			seed += string.charCodeAt(i);
 		}
 		return parseInt(seed);
-    }
+	}
 }
