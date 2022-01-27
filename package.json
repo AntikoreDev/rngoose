@@ -1,7 +1,7 @@
 {
   "name": "rngoose",
   "version": "1.0.0",
-  "description": "Easy rng functions for node",
+  "description": "Easy RNG functions for node",
   "main": "index.js",
   "directories": {
     "test": "test"
