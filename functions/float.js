@@ -29,5 +29,4 @@ function float(min, max, options){
 	return result;
 }
 
-randomFloat = float;
-module.exports = { float, randomFloat }
+module.exports = { float }

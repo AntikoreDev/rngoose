@@ -9,5 +9,4 @@ function bool(options){
 	return float(-99999, 100000, options) > 0;
 }
 
-randomBool = bool
-module.exports = { bool, randomBool }
+module.exports = { bool }

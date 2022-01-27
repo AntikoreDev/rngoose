@@ -37,5 +37,4 @@ function int(min, max, options){
 	return result;
 }
 
-randomInt = int;
-module.exports = { int, randomInt }
+module.exports = { int }
