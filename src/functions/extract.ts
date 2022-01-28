@@ -1,4 +1,6 @@
-const { int } = require('./int.js');
+import { floatOptions } from "./types/floatOptions";
+
+import int  from './int';
 
 /**
  * Returns a random value from a given array and removes it from the array.
@@ -6,7 +8,7 @@ const { int } = require('./int.js');
  * @param {Object} options - Defines the seed and salt to be used
  * @returns {*} Random value from the array
  */
-function extract(array, options){
+function extract(array: any[], options: floatOptions){
 	if (array === undefined || !Array.isArray(array))
 		throw TypeError(`Function choice must be provided with a valid array`);
 
@@ -25,4 +27,4 @@ function extract(array, options){
 	return entry;
 }
 
-module.exports = { extract }
+export default extract 

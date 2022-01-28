@@ -1,6 +1,9 @@
-const { choice } = require("./choice.js");
-const { extract } = require("./extract.js");
-
+import extract from "./extract";
+import choice from "./choice";
+import {floatOptions} from "./types/floatOptions";
+interface choiceOptions extends floatOptions {
+	repeat?: boolean;
+}
 /**
  * Returns an array of random values from a given array
  * @param {Object} array - Array to get the items from
@@ -8,7 +11,7 @@ const { extract } = require("./extract.js");
  * @param {Object} options - Defines the seed and salt to be used, and if values must or must not be repeated
  * @returns {Object} Array of objects
  */
-function choices(array, amount, options = { repeat: false }){
+function choices(array: Array<any>, amount: number, options: choiceOptions = { repeat: false }){
 	const repeat = options['repeat'] || false;
 	const arr = (repeat ? array : array.filter(t => true));
 
@@ -24,4 +27,4 @@ function choices(array, amount, options = { repeat: false }){
 	return list;
 }
 
-module.exports = { choices }
+export default { choices }

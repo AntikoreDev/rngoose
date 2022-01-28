@@ -1,5 +1,5 @@
-const { n } = require('./n.js');
-
+import { floatOptions } from './types/floatOptions';
+import n from './n';
 /**
  * Generates a random float
  * @param {number} min - Min value
@@ -7,7 +7,7 @@ const { n } = require('./n.js');
  * @param {Object} options - Defines the seed and salt to be used
  * @returns {number} Random float value generated
  */
-function float(min, max, options){
+function float(min: number, max: number, options:floatOptions){
 
 	let n1 = 1;
 	let n2 = 6;
@@ -29,4 +29,4 @@ function float(min, max, options){
 	return result;
 }
 
-module.exports = { float }
+export default float

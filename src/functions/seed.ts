@@ -3,7 +3,7 @@
  * @param {string} string - String to be converted into seed 
  * @returns {number} Number that can be used as seed
  */
-function seed(string){
+function seed(string: string){
 
 	if (string === undefined){
 		return Math.abs(new Date().getTime() | 0);
@@ -26,4 +26,4 @@ function seed(string){
 	return Math.max(1, parsed);
 }
 
-module.exports = { seed }
+export default  seed 

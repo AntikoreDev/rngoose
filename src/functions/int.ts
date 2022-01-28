@@ -1,4 +1,5 @@
-const { n } = require('./n.js');
+import { floatOptions } from "./types/floatOptions";
+import n from "./n"
 
 /**
  * Generates a pseudorandom integer
@@ -7,27 +8,16 @@ const { n } = require('./n.js');
  * @param {Object} options - Defines the seed and salt to be used
  * @returns {number} Random value generated
  */
-function int(min, max, options){
+function int(min: number | string  = 1, max: number | string = 6, options: floatOptions): number {
 
-	let n1 = 1;
-	let n2 = 6;
+	let n1 = parseInt(min as string), n2 = parseInt(max as string) ;
+	
 
-	if (arguments.length == 1){
-		n2 = min;
-	}
-
-	if (arguments.length >= 2){
-		n1 = min;
-		n2 = max;
-	}
-
-	if (Number.isNaN(parseInt(n1)) || Number.isNaN(parseInt(n2))){
-		throw RangeError(`One or more values are invalid`);
-	}
+	if (Number.isNaN(n1) || Number.isNaN(n2)) throw RangeError(`One or more values are invalid`);
 
 	// FLoor and ceil min and max values
-	n1 = Math.ceil(n1);
-	n2 = Math.floor(n2);
+	n1 = Math.ceil(n1 as number);
+	n2 = Math.floor(n2 as number);
 
 	if (n1 >= n2)
 		throw RangeError(`Min value must not be bigger or same as max value`);
@@ -37,4 +27,4 @@ function int(min, max, options){
 	return result;
 }
 
-module.exports = { int }
+export default  int 

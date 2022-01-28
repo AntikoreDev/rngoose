@@ -1,12 +1,12 @@
-const { int } = require("./int.js");
-
+import int from "./int";
+import { floatOptions } from "./types/floatOptions";
 /**
  * Returns a random value from a given array
  * @param {Object} array - Array to get the value from
  * @param {Object} options - Defines the seed and salt to be used
  * @returns {*} Random value from the array
  */
-function choice(array, options){
+function choice(array: Array<any>, options: floatOptions) {
 	if (array === undefined || !Array.isArray(array))
 		throw TypeError(`Function choice must be provided with a valid array`);
 
@@ -24,4 +24,4 @@ function choice(array, options){
 	return entry;
 }
 
-module.exports = { choice }
+export default choice 
