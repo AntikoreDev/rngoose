@@ -161,7 +161,7 @@ const coolness = random.int(0, 100, { seed: seed });
 console.log(coolness); // B)
 ```
 ## Contribute
-You can freely contribute to this project by creating pull request, however, you must verify your code works properly before.
+You can freely contribute to this project by creating pull request, however, you must verify your code works properly before. Remember that this repository is licensed under GNU General Public License v3.0
 
 ## Support me
 If you want to support me and my work, consider to [Buy me a coffee](ko-fi.com/antikore) ✨☕
