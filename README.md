@@ -1,5 +1,19 @@
-# RNGoose
-RNGoose is a package to provide better and easier rng functions into JS. Allows for seeds and other stuff.
+# rngoose
+<a href = "https://github.com/AntikoreDev/rngoose" onClick = "return false"><img alt = "Repo size" src = "https://img.shields.io/github/repo-size/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/pulls"><img alt = "Pull Requests" src = "https://img.shields.io/github/issues-pr/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/issues"><img alt = "Issues" src = "https://img.shields.io/github/issues/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/graphs/contributors"><img alt = "Contributors" src = "https://img.shields.io/github/contributors/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/stargazers"><img alt = "Stars" src = "https://img.shields.io/github/stars/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/LICENSE"><img alt = "License" src = "https://img.shields.io/github/license/AntikoreDev/rngoose"></a>
+
+rngoose is a package to provide better and easier rng functions into JS. Allows for seeds and other stuff.
+
+## Installation
+You can install rngoose in your node.js projects. As an example:
+```
+npm i rngoose
+yarn add rngoose
+```
 
 ## How to use
 All you have to do is require the package `rngoose`. In this documentation we will be importing it with the name random in all examples.
@@ -146,3 +160,8 @@ const coolness = random.int(0, 100, { seed: seed });
 
 console.log(coolness); // B)
 ```
+## Contribute
+You can freely contribute to this project by creating pull request, however, you must verify your code works properly before.
+
+## Support me
+If you want to support me and my work, consider to [Buy me a coffee](ko-fi.com/antikore) ✨☕
