@@ -4,7 +4,7 @@
 <a href = "https://github.com/AntikoreDev/rngoose/issues"><img alt = "Issues" src = "https://img.shields.io/github/issues/AntikoreDev/rngoose"></a>
 <a href = "https://github.com/AntikoreDev/rngoose/graphs/contributors"><img alt = "Contributors" src = "https://img.shields.io/github/contributors/AntikoreDev/rngoose"></a>
 <a href = "https://github.com/AntikoreDev/rngoose/stargazers"><img alt = "Stars" src = "https://img.shields.io/github/stars/AntikoreDev/rngoose"></a>
-<a href = "https://github.com/AntikoreDev/rngoose/LICENSE"><img alt = "License" src = "https://img.shields.io/github/license/AntikoreDev/rngoose"></a>
+<a href = "https://github.com/AntikoreDev/rngoose/blob/main/LICENSE"><img alt = "License" src = "https://img.shields.io/github/license/AntikoreDev/rngoose"></a>
 
 rngoose is a package to provide better and easier rng functions into JS. Allows for seeds and other stuff.
 
