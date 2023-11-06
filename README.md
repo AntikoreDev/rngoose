@@ -6,7 +6,6 @@
 	<a href = "https://github.com/AntikoreDev/rngoose/graphs/contributors"><img alt = "Contributors" src = "https://img.shields.io/github/contributors/AntikoreDev/rngoose?style=for-the-badge"></a>
 	<a href = "https://github.com/AntikoreDev/rngoose/stargazers"><img alt = "Stars" src = "https://img.shields.io/github/stars/AntikoreDev/rngoose?style=for-the-badge"></a>
 	<a href = "https://github.com/AntikoreDev/rngoose/blob/main/LICENSE"><img alt = "License" src = "https://img.shields.io/github/license/AntikoreDev/rngoose?style=for-the-badge"></a>
-	<a href = "https://github.com/AntikoreDev/rngoose/blob/main/LICENSE"><img alt = "License" src = "https://img.shields.io/github/license/AntikoreDev/rngoose?style=for-the-badge"></a>
 	<a href = "https://github.com/AntikoreDev/rngoose"><img alt="npm" src="https://img.shields.io/npm/dt/rngoose?style=for-the-badge"></a>
 </div>
 
